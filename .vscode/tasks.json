@@ -1,0 +1,21 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build v1_max",
+            "type": "shell",
+            "command": "cd ~/git/qmk_firmware && make keychron/v1_max/iso_encoder:cloonix && cd -",
+            "presentation": {
+                "reveal": "silent",
+                "close": true
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
