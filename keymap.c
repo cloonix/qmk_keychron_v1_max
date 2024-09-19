@@ -27,9 +27,9 @@ enum layers {
 };
 
 // Tap Dance declarations
-enum {
-    TD_KC_GRV
-};
+// enum {
+//     TD_KC_GRV = 0,
+// };
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -50,20 +50,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  _______,  _______,  _______,                                _______,                                _______,  _______,  _______,  _______,  _______,  _______),
 
 [MAC_02] = LAYOUT_iso_83(
- _______,  _______,        _______,  _______,        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,
- _______,  _______,        _______,  _______,        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  QK_BOOT,            _______,
- _______,  _______,        _______,  _______,        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,                      _______,
- _______,  LCTL(KC_LEFT),  KC_MCTRL, LCTL(KC_RGHT),  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,
- _______,  _______,        _______,  _______,        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,  _______,
- _______,  _______,        _______,                                      _______,                                _______,  _______,  _______,  _______,  _______,  _______),
+ _______,  _______,        _______,       _______,        _______,    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,
+ _______,  _______,        _______,       _______,        _______,    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  QK_BOOT,            _______,
+ _______,  LCAG(KC_Q),     _______,       LCAG(KC_E),     _______,    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,                      _______,
+ _______,  LCTL(KC_LEFT),  KC_MCTRL,      LCTL(KC_RGHT),  LCAG(KC_F), _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,
+ _______,  _______,        _______,       _______,        _______,    _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,  _______,
+ _______,  _______,        _______,                                             _______,                                _______,  _______,  _______,  _______,  _______,  _______),
 
 [WIN_01] = LAYOUT_iso_83(
- KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_DEL,             KC_MUTE,
- QK_LEAD,  KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINS,  KC_EQL,   KC_BSPC,            KC_PGUP,
- KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,                      KC_PGDN,
- KC_CAPS,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,  KC_NUHS,  KC_ENT,             KC_HOME,
- KC_LSFT,  KC_NUBS,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,            KC_RSFT,  KC_UP,
- KC_LCTL,  KC_LGUI,  KC_LALT,                                KC_SPC,                                 KC_RALT, MO(WIN_FN),KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
+ KC_ESC,      KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_DEL,             KC_MUTE,
+ QK_LEAD,     KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINS,  KC_EQL,   KC_BSPC,            KC_PGUP,
+ KC_TAB,      KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,                      KC_PGDN,
+ MO(WIN_02),  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,  KC_NUHS,  KC_ENT,             KC_HOME,
+ KC_LSFT,     KC_NUBS,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,            KC_RSFT,  KC_UP,
+ KC_LCTL,     KC_LGUI,  KC_LALT,                                KC_SPC,                                 KC_RALT, MO(WIN_FN),KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
 [WIN_FN] = LAYOUT_iso_83(
  _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FILE,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,            RGB_TOG,
@@ -102,20 +102,27 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 // Tap Dance definitions
-tap_dance_action_t tap_dance_actions[] = {
-    // Tap once for Escape, twice for Caps Lock
-    [TD_KC_GRV] = ACTION_TAP_DANCE_LAYER_TOGGLE(QK_LEAD, WIN_01),
-};
+// tap_dance_action_t tap_dance_actions[] = {
+//     // Tap once for Escape, twice for Caps Lock
+//     [TD_KC_GRV] = ACTION_TAP_DANCE_LAYER_TOGGLE(QK_LEAD, WIN_01),
+// };
 
 void leader_start_user(void) {
     // Do something when the leader key is pressed
 }
 
 void leader_end_user(void) {
-    if (leader_sequence_one_key(KC_1)) {
-        // Leader, f => Types the below string
-        SEND_STRING("QMK is awesome.");
-    }
+
+  bool did_leader_succeed = false;
+
+  if (leader_sequence_one_key(KC_TAB)) {
+    layer_invert(WIN_01);
+    did_leader_succeed = true;
+  }
+  
+  if (!did_leader_succeed) {
+    tap_code(KC_GRV);
+  }
 }
 
 // RGB modifications
